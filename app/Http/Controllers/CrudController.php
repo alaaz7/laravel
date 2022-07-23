@@ -53,7 +53,7 @@ class CrudController extends Controller
 
     ]);
        // return 'data saved succssfuly';
-       return redirect()->back()->with(['succss'=>'تم اضافة العرض بنجاح']);
+       return redirect()->back()->with(['succss'=>__('messages.succss')]);
     }
 
     protected function getMassges(){

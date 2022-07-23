@@ -22,6 +22,16 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+
+        Schema::create('offers', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('price');
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
+            $table->rememberToken();
+           
+        });
     }
 
     /**
@@ -32,5 +42,6 @@ class CreateUsersTable extends Migration
     public function down()
     {
         Schema::dropIfExists('users');
+        Schema::dropIfExists('offers');
     }
 }

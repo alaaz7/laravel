@@ -18,6 +18,12 @@ return [
 "offer price required"=> 'سعر العرض مطلوب',
 "offer details required"=>'تفاصيل العرض مطلوب',
 "offer name must be unique"=>'اسم العرض موجود بالفعل',
-"offer price must be numeric"=> 'سعر العرض ارقام فقط'
+"offer price must be numeric"=> 'سعر العرض ارقام فقط',
+"Add new Offer"=>'اضافة عرض جديد',
+"Offer Name"=>'اسم العرض',
+"Offer Price"=>'سعر العرض',
+"Offer Details"=>'تفاصيل العرض',
+"Save"=>'حفظ العرض',
+"succss"=>'تم اضافة العرض بنجاح'
 
 ];

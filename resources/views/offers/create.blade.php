@@ -81,8 +81,8 @@
       <p><a href="#">Link</a></p>
     </div>
     <div class="col-sm-8 text-left"> 
-      <h1>Welcome</h1>
-<p>Add new Offer</p>
+      <h1>{{__('messages.welcome')}}</h1>
+<p>{{__('messages.Add new Offer')}}</p>
 <br>
 @if(Session::has('succss'))
 <div class="alert alert-success" role="alert">
@@ -94,7 +94,7 @@
    <!-- <input name="_token" value="{{csrf_token()}}"> -->
    
     <div class="form-group">
-      <label class="control-label col-sm-2" for="email">Offer Name:</label>
+      <label class="control-label col-sm-2" for="email">{{__('messages.Offer Name')}}:</label>
       <div class="col-sm-10">
         <input type="text" class="form-control" id="name" placeholder="Enter Offer" name="name">
         @error('name')
@@ -103,7 +103,7 @@
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" for="pwd">Offer Price:</label>
+      <label class="control-label col-sm-2" for="pwd">{{__('messages.Offer Price')}}:</label>
       <div class="col-sm-10">          
         <input type="text" class="form-control" id="price" placeholder="Enter Price" name="price">
         @error('price')
@@ -112,7 +112,7 @@
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" for="pwd">Offer Details:</label>
+      <label class="control-label col-sm-2" for="pwd">{{__('messages.Offer Details')}}:</label>
       <div class="col-sm-10">          
         <input type="text" class="form-control" id="details" placeholder="Enter Details" name="details">
         @error('details')
@@ -123,7 +123,7 @@
    
     <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">{{__('messages.Save')}}</button>
       </div>
     </div>
   </form>
