@@ -22,8 +22,15 @@ return [
     "offer price must be numeric"=> 'offer price must be numeric in eng',
     "Add new Offer"=>'Add new Offers',
     "Offer Name"=>'Offer Name',
+    "Offer Name en"=>"Offer Name en",
+    "Offer Name ar"=>"Offer Name en",
     "Offer Price"=>'Offer Price',
+    "Offer Price ar"=>'Offer Price en',
+    "Offer Price en"=>'Offer Price en',
     "Offer Details"=>'Offer Details',
+    "Offer Details en"=>'Offer Details en',
+    "Offer Details ar"=>'Offer Details en',
+
     "Save"=>'Save offer',
     "succss"=>'offer added sucssfuly'
 ];

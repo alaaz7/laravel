@@ -96,29 +96,60 @@
     @csrf 
    <!-- <input name="_token" value="{{csrf_token()}}"> -->
    
-    <div class="form-group">
-      <label class="control-label col-sm-2" for="email">{{__('messages.Offer Name')}}:</label>
+   <div class="form-group">
+   <label for="exampleInputEmail1">أختر صوره العرض</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" id="name" placeholder="Enter Offer" name="name">
-        @error('name')
+        <input type="file" class="form-control" id="photo"  name="photo">
+        @error('photo')
         <small class="form-text text-danger">{{$message}}</small>
         @enderror
       </div>
     </div>
+
     <div class="form-group">
-      <label class="control-label col-sm-2" for="pwd">{{__('messages.Offer Price')}}:</label>
+      <label class="control-label col-sm-2" for="email">{{__('messages.Offer Name ar')}}:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="name_ar" placeholder="{{__('messages.Offer Name')}}" name="name_ar">
+        @error('name_ar')
+        <small class="form-text text-danger">{{$message}}</small>
+        @enderror
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="email">{{__('messages.Offer Name en')}}:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="name_en" placeholder="{{__('messages.Offer Name')}}" name="name_en">
+        @error('name_en')
+        <small class="form-text text-danger">{{$message}}</small>
+        @enderror
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">{{__('messages.Offer Price ar')}}:</label>
       <div class="col-sm-10">          
-        <input type="text" class="form-control" id="price" placeholder="Enter Price" name="price">
+        <input type="text" class="form-control" id="price" placeholder="{{__('messages.Offer Price')}}" name="price">
         @error('price')
         <small class="form-text text-danger">{{$message}}</small>
         @enderror
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" for="pwd">{{__('messages.Offer Details')}}:</label>
+      <label class="control-label col-sm-2" for="pwd">{{__('messages.Offer Details ar')}}:</label>
       <div class="col-sm-10">          
-        <input type="text" class="form-control" id="details" placeholder="Enter Details" name="details">
-        @error('details')
+        <input type="text" class="form-control" id="details_ar" placeholder="{{__('messages.Offer Details')}}" name="details_ar">
+        @error('details_ar')
+        <small class="form-text text-danger">{{$message}}</small>
+        @enderror
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">{{__('messages.Offer Details en')}}:</label>
+      <div class="col-sm-10">          
+        <input type="text" class="form-control" id="details_en" placeholder="{{__('messages.Offer Details')}}" name="details_en">
+        @error('details_en')
         <small class="form-text text-danger">{{$message}}</small>
         @enderror
       </div>

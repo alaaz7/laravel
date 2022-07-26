@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Offer;
+use App\Http\Requests\offerRequest;
+use LaravelLocalization;
 class CrudController extends Controller
 {
     public function __construct()
@@ -31,32 +33,34 @@ class CrudController extends Controller
         return view('offers.create');
     }
 
-    public function save(Request $req){
+    public function save(offerRequest $req){ //Request $req درس تحسين الكود رقم 54
         
         //validate data befor insert to database
            // Validator take 3 params [request] [rules] [messages to return]
-           $rules = $this->getRules();
-           $msgs= $this->getMassges();
-        $validate = Validator::make($req->all(), $rules ,$msgs);
+         //  $rules = $this->getRules();
+         //  $msgs= $this->getMassges();
+       // $validate = Validator::make($req->all(), $rules ,$msgs);
 
-        if($validate -> fails()){
+      //  if($validate -> fails()){
           //  return $validate -> errors(); // to return all errors was happend
          // return $validate -> errors() -> first(); // to return first error was happend
-         return redirect()->back()->withErrors($validate)->withInputs($req->all());
+      //   return redirect()->back()->withErrors($validate)->withInputs($req->all());
 
-        }
+      //  }
         //insert
         Offer::create([ 
-             'name' => $req -> name,
+             'name_ar' => $req -> name_ar,
+             'name_en' => $req -> name_en,
              'price' => $req ->price,
-             'details'=> $req -> details,
+             'details_en'=> $req -> details_en,
+             'details_ar'=> $req -> details_ar,
 
     ]);
        // return 'data saved succssfuly';
        return redirect()->back()->with(['succss'=>__('messages.succss')]);
     }
 
-    protected function getMassges(){
+ /*    protected function getMassges(){
 
         $msgs=[
             'name.required'=> trans('messages.offer name required'), // __() or trans() to select any lang you want to return message
@@ -80,5 +84,17 @@ class CrudController extends Controller
 
            ];
            return $rules;
+    } */
+
+    public function getAllOffers()
+    {
+       $offers = Offer::select('id',
+            'price',
+            'photo',
+            'name_' . LaravelLocalization::getCurrentLocale() . ' as name',
+            'details_' . LaravelLocalization::getCurrentLocale() . ' as details'
+        )->get(); // return collection of all result
+
+        return view('offers.all', compact('offers'));
     }
 }

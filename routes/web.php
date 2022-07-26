@@ -130,6 +130,7 @@ Route::group(['prefix' => 'offers'],function(){
 
 
     Route::get('create','CrudController@create');
+    Route::get('all','CrudController@getAllOffers');
 
     Route::post('save','CrudController@save')-> name('offers.save');
 
