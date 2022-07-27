@@ -30,7 +30,10 @@ return [
     "Offer Details"=>'Offer Details',
     "Offer Details en"=>'Offer Details en',
     "Offer Details ar"=>'Offer Details en',
-
+    "operation"=>'operation',
     "Save"=>'Save offer',
-    "succss"=>'offer added sucssfuly'
+    "succss"=>'offer added sucssfuly',
+    "success"=>'offer update sucssfuly',
+    "update"=> 'update offer',
+    "Add your Offer"=>'Update your offer'
 ];
