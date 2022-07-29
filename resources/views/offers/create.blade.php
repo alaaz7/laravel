@@ -92,7 +92,7 @@
 {{Session::get('succss')}}
 </div>
 @endif
-<form class="form-horizontal" method="POST" action="{{route('offers.save')}}">
+<form class="form-horizontal" method="POST" action="{{route('offers.save')}}" enctype="multipart/form-data">
     @csrf 
    <!-- <input name="_token" value="{{csrf_token()}}"> -->
    

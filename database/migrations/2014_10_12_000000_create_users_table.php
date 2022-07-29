@@ -30,6 +30,7 @@ class CreateUsersTable extends Migration
             $table->string('details_ar');
             $table->string('details_en');
             $table->string('price');
+            $table->string('photo');
             $table->int('status');
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
