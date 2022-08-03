@@ -31,9 +31,17 @@ class CreateUsersTable extends Migration
             $table->string('details_en');
             $table->string('price');
             $table->string('photo');
-            $table->int('status');
+            $table->integer('status');
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
+            $table->rememberToken();
+           
+        });
+
+        Schema::create('videos', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->integer('viwers');
             $table->rememberToken();
            
         });
@@ -48,5 +56,6 @@ class CreateUsersTable extends Migration
     {
         Schema::dropIfExists('users');
         Schema::dropIfExists('offers');
+        Schema::dropIfExists('videos');
     }
 }

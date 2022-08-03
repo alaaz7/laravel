@@ -8,6 +8,8 @@ use App\Models\Offer;
 use App\Traits\OfferTrait;
 use App\Http\Requests\offerRequest;
 use LaravelLocalization;
+use App\Models\Video;
+use App\Events\VideoViewer;
 class CrudController extends Controller
 {
 
@@ -146,5 +148,12 @@ class CrudController extends Controller
               'price' => $request->price,
           ]);*/
 
+    }
+
+    public function getVideo()
+    {
+        $video = Video::first();
+        event(new VideoViewer($video)); //fire event
+        return view('video')->with('video', $video);
     }
 }
