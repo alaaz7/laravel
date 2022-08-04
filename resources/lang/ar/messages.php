@@ -33,6 +33,9 @@ return [
 "succss"=>'تم اضافة العرض بنجاح',
 "success"=>'تم التعديل بنجاح',
 "update"=> 'تعديل',
-"Add your Offer"=>'تعديل العرض'
+"Add your Offer"=>'تعديل العرض',
+"delete"=>'حذف',
+"offer not exist"=>'العرض غير موجود',
+"offer deleted successfully"=>'تم حذف العرض بنجاح'
 
 ];

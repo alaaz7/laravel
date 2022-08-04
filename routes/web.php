@@ -130,10 +130,11 @@ Route::group(['prefix' => 'offers'],function(){
 
 
     Route::get('create','CrudController@create');
-    Route::get('all','CrudController@getAllOffers');
+    Route::get('all','CrudController@getAllOffers')-> name('offers.all');
 
     Route::get('edit/{offer_id}','CrudController@editOffer');
-    Route::post('update/{offer_id}','CrudController@UpdateOffer')-> name('offers.update');;
+    Route::post('update/{offer_id}','CrudController@UpdateOffer')-> name('offers.update');
+    Route::get('delete/{offer_id}','CrudController@DeleteOffer')-> name('offers.delete');;
 
     Route::post('save','CrudController@save')-> name('offers.save');
 

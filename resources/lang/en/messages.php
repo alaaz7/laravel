@@ -35,5 +35,8 @@ return [
     "succss"=>'offer added sucssfuly',
     "success"=>'offer update sucssfuly',
     "update"=> 'update offer',
-    "Add your Offer"=>'Update your offer'
+    "Add your Offer"=>'Update your offer',
+    "delete"=>'delete',
+    "offer not exist"=>'offer not exist',
+    "offer deleted successfully"=>'offer deleted successfully'
 ];
