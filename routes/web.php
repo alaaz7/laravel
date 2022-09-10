@@ -143,3 +143,17 @@ Route::group(['prefix' => 'offers'],function(){
 Route::get('youtube','CrudController@getVideo')-> middleware('auth');
 
 });
+
+################# Begin Ajax Route ####################
+
+Route::group(['prefix' => 'ajax-offers'],function(){
+    
+    Route::get('create','OfferController@create');
+
+    Route::post('store','OfferController@store')-> name('ajax-offers.store');
+
+
+
+});
+
+################# End Ajax Route ####################
